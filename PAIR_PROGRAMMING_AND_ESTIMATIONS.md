@@ -4,35 +4,34 @@
 
 El pair programming es una práctica donde dos desarrolladores trabajan juntos en una misma tarea.
 
-- **Driver**: es quien escribe el código.
-- **Navigator**: revisa el código, propone mejoras y piensa en la solución general.
+- **Driver**: es quien escribe el código y se enfoca en la implementación.
+- **Navigator**: revisa el código, propone mejoras y analiza la solución desde una perspectiva más general.
 
-Esta práctica ayuda a mejorar la calidad del código, detectar errores de forma temprana y compartir conocimiento entre los miembros del equipo.
-Además, mejora la comunicación y la colaboración.
+Esta práctica ayuda a mejorar la calidad del código, detectar errores de forma temprana y compartir conocimiento entre los miembros del equipo.  
+Además, fomenta una mejor comunicación, colaboración y toma de decisiones dentro del equipo.
 
 ## Estimaciones con Story Points
 
-Las historias de usuario del proyecto fueron estimadas utilizando Story Points con la secuencia de Fibonacci.
+Las historias de usuario del proyecto fueron estimadas utilizando **Story Points** basados en la secuencia de Fibonacci.
 
-Los puntos representan el esfuerzo relativo de cada historia, no el tiempo.
-Para estimar se toma en cuenta la complejidad, la incertidumbre y el trabajo necesario.
+Los Story Points representan el esfuerzo relativo de cada historia, no el tiempo necesario para completarla.  
+Para estimar se consideran factores como la complejidad, la incertidumbre y el trabajo requerido.
 
 ## Planning Poker
 
-Planning Poker es una técnica utilizada para llegar a un consenso en las estimaciones.
-Cada miembro del equipo propone una estimación y se discuten las diferencias hasta acordar un valor final.
+Planning Poker es una técnica utilizada para estimar historias de usuario de manera colaborativa.  
+Cada miembro del equipo propone una estimación y, cuando existen diferencias, se discuten los puntos de vista hasta llegar a un consenso común.
 
-## Video 1 – Aprendizajes
+## Video 1 – Aprendizajes (Autoridad y Responsabilidad)
 
-Aprendí que la colaboración efectiva requiere comunicación clara y apertura a recibir feedback.
-El trabajo en pareja permite identificar errores más rápido y mejorar la calidad del trabajo.
+Este video muestra cómo las personas pueden seguir órdenes de una figura de autoridad incluso cuando se sienten incómodas o saben que algo no está bien.
 
-## Video 2 – Aprendizajes
+Aprendí la importancia de asumir responsabilidad individual y no delegar completamente las decisiones en la autoridad.  
+En un equipo de trabajo es fundamental cuestionar, comunicar desacuerdos y actuar con criterio propio cuando algo no parece correcto.
 
-El video resalta la importancia de la empatía y el respeto en el trabajo en equipo.
-Una buena actitud y comunicación ayudan a resolver conflictos y trabajar mejor con otras personas.
+## Video 2 – Aprendizajes (Lenguaje Corporal y Comunicación)
 
-## Manejo de Emociones
+El video resalta la importancia de la comunicación no verbal y el lenguaje corporal en el trabajo en equipo y las presentaciones.
 
-El entrenamiento de manejo de emociones muestra la importancia de reconocer y controlar las emociones durante el trabajo.
-Esto permite tomar mejores decisiones, comunicarse de forma efectiva y mantener un ambiente de trabajo sano.
+Aprendí que la postura, los gestos, el contacto visual y la seguridad corporal influyen directamente en la percepción de confianza y credibilidad.  
+Esto es clave en reuniones, presentaciones y sesiones de pair programming, donde una comunicación clara y segura mejora la colaboración.
