@@ -1,37 +1,38 @@
-# Pair Programming y Estimaciones
+# Pair Programming and Estimation
 
 ## Pair Programming
 
-El pair programming es una práctica donde dos desarrolladores trabajan juntos en una misma tarea.
+Pair programming is a practice where two developers work together on the same task.
 
-- **Driver**: es quien escribe el código y se enfoca en la implementación.
-- **Navigator**: revisa el código, propone mejoras y analiza la solución desde una perspectiva más general.
+- **Driver**: is the person who writes the code.
+- **Navigator**: reviews the code, suggests improvements, and thinks about the overall solution.
 
-Esta práctica ayuda a mejorar la calidad del código, detectar errores de forma temprana y compartir conocimiento entre los miembros del equipo.  
-Además, fomenta una mejor comunicación, colaboración y toma de decisiones dentro del equipo.
+This practice helps improve code quality, detect errors early, and share knowledge among team members.
+In addition, it improves communication and collaboration.
 
-## Estimaciones con Story Points
+## Estimation with Story Points
 
-Las historias de usuario del proyecto fueron estimadas utilizando **Story Points** basados en la secuencia de Fibonacci.
+The user stories of the project were estimated using Story Points with the Fibonacci sequence.
 
-Los Story Points representan el esfuerzo relativo de cada historia, no el tiempo necesario para completarla.  
-Para estimar se consideran factores como la complejidad, la incertidumbre y el trabajo requerido.
+The points represent the relative effort of each story, not time.
+When estimating, complexity, uncertainty, and the required work are taken into account.
 
 ## Planning Poker
 
-Planning Poker es una técnica utilizada para estimar historias de usuario de manera colaborativa.  
-Cada miembro del equipo propone una estimación y, cuando existen diferencias, se discuten los puntos de vista hasta llegar a un consenso común.
+Planning Poker is a technique used to reach a consensus on estimations.
+Each team member proposes an estimate, and differences are discussed until a final value is agreed upon.
 
-## Video 1 – Aprendizajes (Autoridad y Responsabilidad)
+## Video 1 – Learnings
 
-Este video muestra cómo las personas pueden seguir órdenes de una figura de autoridad incluso cuando se sienten incómodas o saben que algo no está bien.
+I learned that effective collaboration requires clear communication and openness to receive feedback.
+Working in pairs makes it possible to identify errors faster and improve the quality of the work.
 
-Aprendí la importancia de asumir responsabilidad individual y no delegar completamente las decisiones en la autoridad.  
-En un equipo de trabajo es fundamental cuestionar, comunicar desacuerdos y actuar con criterio propio cuando algo no parece correcto.
+## Video 2 – Learnings
 
-## Video 2 – Aprendizajes (Lenguaje Corporal y Comunicación)
+The video highlights the importance of empathy and respect in teamwork.
+A good attitude and clear communication help resolve conflicts and work better with others.
 
-El video resalta la importancia de la comunicación no verbal y el lenguaje corporal en el trabajo en equipo y las presentaciones.
+## Emotion Management
 
-Aprendí que la postura, los gestos, el contacto visual y la seguridad corporal influyen directamente en la percepción de confianza y credibilidad.  
-Esto es clave en reuniones, presentaciones y sesiones de pair programming, donde una comunicación clara y segura mejora la colaboración.
+The emotion management training shows the importance of recognizing and controlling emotions during work.
+This allows better decision-making, effective communication, and maintaining a healthy work environment.
