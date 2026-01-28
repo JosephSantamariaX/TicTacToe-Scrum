@@ -1,162 +1,162 @@
-# Tic Tac Toe – Escenarios BDD
+# Tic Tac Toe – BDD Scenarios
 
-Este documento define escenarios de comportamiento para el juego Tic Tac Toe utilizando el formato **Given–When–Then** (Dado–Cuando–Entonces).  
-Los escenarios están basados en las historias de usuario definidas para el proyecto.
-
----
-
-## 1. Inicio del Juego
-
-### Escenario 1.1: Iniciar una nueva partida como jugador X
-**Given** que el usuario está en la pantalla inicial del juego  
-**When** selecciona jugar como "X" y presiona el botón "Iniciar partida"  
-**Then** se debe mostrar un tablero vacío de 3x3  
-**And** debe indicarse visualmente que es el turno del jugador "X".
-
-### Escenario 1.2: Iniciar una nueva partida como jugador O
-**Given** que el usuario está en la pantalla inicial del juego  
-**When** selecciona jugar como "O" y presiona el botón "Iniciar partida"  
-**Then** se debe mostrar un tablero vacío de 3x3  
-**And** debe indicarse visualmente que es el turno del jugador "O".
+This document defines behavior scenarios for the Tic Tac Toe game using the **Given–When–Then** format.  
+The scenarios are based on the user stories defined for the project.
 
 ---
 
-## 2. Realizar un Movimiento
+## 1. Game Start
 
-### Escenario 2.1: Marcar una casilla vacía
-**Given** que la partida está en progreso  
-**And** es el turno del jugador actual  
-**And** hay al menos una casilla vacía en el tablero  
-**When** el jugador hace clic en una casilla vacía  
-**Then** la casilla debe mostrar la marca del jugador actual ("X" u "O")  
-**And** ya no debe ser posible volver a hacer clic en esa casilla.
+### Scenario 1.1: Start a new game as player X
+**Given** the user is on the game start screen  
+**When** the user selects to play as "X" and presses the "Start Game" button  
+**Then** an empty 3x3 board should be displayed  
+**And** it should be visually indicated that it is player "X"'s turn.
 
-### Escenario 2.2: Intentar marcar una casilla ocupada
-**Given** que una casilla ya tiene una marca ("X" u "O")  
-**When** el jugador intenta hacer clic de nuevo en esa casilla  
-**Then** el juego no debe cambiar la marca existente  
-**And** no debe afectar el turno actual ni el estado de la partida.
-
-### Escenario 2.3: Cambiar de turno después de una jugada válida
-**Given** que es el turno del jugador "X"  
-**And** el tablero tiene al menos una casilla vacía  
-**When** el jugador "X" marca una casilla válida  
-**Then** el juego debe cambiar el turno al jugador "O"  
-**And** debe actualizarse el indicador visual del turno.
+### Scenario 1.2: Start a new game as player O
+**Given** the user is on the game start screen  
+**When** the user selects to play as "O" and presses the "Start Game" button  
+**Then** an empty 3x3 board should be displayed  
+**And** it should be visually indicated that it is player "O"'s turn.
 
 ---
 
-## 3. Determinación de Ganador y Empate
+## 2. Making a Move
 
-### Escenario 3.1: Ganar por fila
-**Given** que el jugador "X" ya tiene dos casillas marcadas en la misma fila  
-**And** hay una tercera casilla vacía en esa fila  
-**When** el jugador "X" marca la tercera casilla en esa fila  
-**Then** el juego debe detectar que el jugador "X" ha ganado  
-**And** debe mostrar un mensaje indicando que "X" es el ganador  
-**And** debe evitar que se sigan realizando jugadas.
+### Scenario 2.1: Mark an empty cell
+**Given** the game is in progress  
+**And** it is the current player’s turn  
+**And** there is at least one empty cell on the board  
+**When** the player clicks on an empty cell  
+**Then** the cell should display the current player’s mark ("X" or "O")  
+**And** the cell should no longer be clickable.
 
-### Escenario 3.2: Ganar por columna
-**Given** que el jugador "O" ya tiene dos casillas marcadas en la misma columna  
-**And** hay una tercera casilla vacía en esa columna  
-**When** el jugador "O" marca la tercera casilla en esa columna  
-**Then** el juego debe detectar que el jugador "O" ha ganado  
-**And** debe mostrar un mensaje indicando que "O" es el ganador  
-**And** debe evitar que se sigan realizando jugadas.
+### Scenario 2.2: Attempt to mark an occupied cell
+**Given** a cell already contains a mark ("X" or "O")  
+**When** the player attempts to click on that cell again  
+**Then** the game should not change the existing mark  
+**And** the current turn and game state should not be affected.
 
-### Escenario 3.3: Ganar por diagonal
-**Given** que el jugador "X" ya tiene dos casillas marcadas en una diagonal  
-**And** hay una tercera casilla vacía en esa diagonal  
-**When** el jugador "X" marca la tercera casilla en esa diagonal  
-**Then** el juego debe detectar que el jugador "X" ha ganado  
-**And** debe mostrar un mensaje indicando que "X" es el ganador  
-**And** debe evitar que se sigan realizando jugadas.
-
-### Escenario 3.4: Empate sin ganador
-**Given** que todas las casillas del tablero están llenas  
-**And** no existe ninguna fila, columna o diagonal con tres marcas iguales  
-**When** el jugador intenta realizar una nueva jugada  
-**Then** el juego debe indicar que la partida ha terminado en empate  
-**And** no debe permitir más movimientos.
+### Scenario 2.3: Switch turns after a valid move
+**Given** it is player "X"'s turn  
+**And** the board has at least one empty cell  
+**When** player "X" marks a valid cell  
+**Then** the game should switch the turn to player "O"  
+**And** the visual turn indicator should be updated.
 
 ---
 
-## 4. Reiniciar el Juego
+## 3. Win and Draw Determination
 
-### Escenario 4.1: Reiniciar la partida desde el tablero
-**Given** que una partida ha terminado en victoria o empate  
-**When** el usuario presiona el botón "Reiniciar"  
-**Then** el tablero debe restablecerse a un estado vacío de 3x3  
-**And** no debe haber marcas previas en ninguna casilla  
-**And** el juego debe permitir nuevamente seleccionar quién juega como "X" y "O" o mantener la configuración definida.
+### Scenario 3.1: Win by row
+**Given** player "X" already has two cells marked in the same row  
+**And** there is a third empty cell in that row  
+**When** player "X" marks the third cell in that row  
+**Then** the game should detect that player "X" has won  
+**And** a message indicating that "X" is the winner should be displayed  
+**And** further moves should be prevented.
 
-### Escenario 4.2: Reiniciar durante una partida en progreso
-**Given** que hay una partida en progreso (no ha terminado)  
-**When** el usuario presiona el botón "Reiniciar"  
-**Then** el tablero debe limpiarse completamente  
-**And** el estado del juego debe volver a su estado inicial  
-**And** el turno debe reiniciarse según la configuración seleccionada.
+### Scenario 3.2: Win by column
+**Given** player "O" already has two cells marked in the same column  
+**And** there is a third empty cell in that column  
+**When** player "O" marks the third cell in that column  
+**Then** the game should detect that player "O" has won  
+**And** a message indicating that "O" is the winner should be displayed  
+**And** further moves should be prevented.
 
----
+### Scenario 3.3: Win by diagonal
+**Given** player "X" already has two cells marked in a diagonal  
+**And** there is a third empty cell in that diagonal  
+**When** player "X" marks the third cell in that diagonal  
+**Then** the game should detect that player "X" has won  
+**And** a message indicating that "X" is the winner should be displayed  
+**And** further moves should be prevented.
 
-## 5. Interfaz de Usuario Intuitiva
-
-### Escenario 5.1: Visualización clara del tablero
-**Given** que el usuario ha iniciado el juego  
-**When** se muestra el tablero  
-**Then** las 9 casillas deben estar claramente delimitadas  
-**And** deben ser fácilmente identificables como clicables o seleccionables.
-
-### Escenario 5.2: Indicador de turno visible
-**Given** que el juego está en progreso  
-**When** cambia el turno de un jugador a otro  
-**Then** debe actualizarse un indicador visible mostrando de quién es el turno actual  
-**And** el jugador debe poder identificar fácilmente cuándo le toca jugar.
-
-### Escenario 5.3: Mensajes claros de estado del juego
-**Given** que la partida ha terminado en victoria o empate  
-**When** el juego muestra el resultado  
-**Then** el mensaje debe indicar claramente si hubo un ganador o si fue empate  
-**And** el mensaje debe ser lo suficientemente visible para que el usuario no tenga dudas del resultado.
+### Scenario 3.4: Draw with no winner
+**Given** all cells on the board are filled  
+**And** there is no row, column, or diagonal with three matching marks  
+**When** the player attempts to make a new move  
+**Then** the game should indicate that the match has ended in a draw  
+**And** no additional moves should be allowed.
 
 ---
 
-## 6. Modo Multijugador Local
+## 4. Restarting the Game
 
-### Escenario 6.1: Alternar turnos entre dos jugadores en el mismo dispositivo
-**Given** que se ha iniciado una partida en modo multijugador local  
-**When** el jugador 1 realiza una jugada válida  
-**Then** el turno debe pasar al jugador 2  
-**And** el indicador de turno debe reflejar que ahora le corresponde al jugador 2  
-**And** este comportamiento debe repetirse alternando los turnos hasta que termine la partida.
+### Scenario 4.1: Restart the game from the board
+**Given** a game has ended in a win or a draw  
+**When** the user presses the "Restart" button  
+**Then** the board should be reset to an empty 3x3 state  
+**And** no previous marks should remain on any cell  
+**And** the game should allow the user to select who plays as "X" and "O", or keep the previously defined configuration.
 
-### Escenario 6.2: Mostrar el resultado para ambos jugadores
-**Given** que la partida en modo multijugador local ha terminado  
-**When** el juego detecta un ganador  
-**Then** debe mostrar quién ganó (jugador 1 o jugador 2, o "X" / "O")  
-**And** ambos jugadores deben poder ver claramente el resultado en pantalla.
+### Scenario 4.2: Restart during an ongoing game
+**Given** a game is in progress  
+**When** the user presses the "Restart" button  
+**Then** the board should be completely cleared  
+**And** the game state should return to its initial state  
+**And** the turn should be reset according to the selected configuration.
 
 ---
 
-## 7. Modo de Juego contra la Computadora (IA)
+## 5. Intuitive User Interface
 
-### Escenario 7.1: Seleccionar modo contra la computadora
-**Given** que el usuario está en la pantalla inicial del juego  
-**When** selecciona el modo "Jugar contra la computadora"  
-**Then** el juego debe configurarse para que un jugador sea humano y el otro sea controlado por la IA  
-**And** debe indicarse claramente quién es el jugador humano y quién es la computadora.
+### Scenario 5.1: Clear board visualization
+**Given** the user has started the game  
+**When** the board is displayed  
+**Then** the 9 cells should be clearly defined  
+**And** they should be easily identifiable as clickable or selectable.
 
-### Escenario 7.2: Turno de la computadora
-**Given** que la partida está en modo contra la computadora  
-**And** el jugador humano ha realizado una jugada válida  
-**When** termina el turno del jugador humano  
-**Then** la computadora debe realizar automáticamente un movimiento válido en el tablero  
-**And** después de la jugada de la computadora, el turno debe volver al jugador humano.
+### Scenario 5.2: Visible turn indicator
+**Given** the game is in progress  
+**When** the turn changes from one player to another  
+**Then** a visible indicator should be updated to show whose turn it is  
+**And** the player should be able to easily identify when it is their turn.
 
-### Escenario 7.3: Dificultad de la IA (cuando aplique)
-**Given** que el juego ofrece diferentes niveles de dificultad para la computadora (por ejemplo: fácil, medio, difícil)  
-**When** el usuario selecciona un nivel de dificultad antes de iniciar la partida  
-**Then** el comportamiento de la IA debe ajustarse a la dificultad elegida  
-**And** la experiencia de juego debe sentirse más sencilla o más desafiante según la selección.
+### Scenario 5.3: Clear game status messages
+**Given** the game has ended in a win or a draw  
+**When** the result is displayed  
+**Then** the message should clearly indicate whether there is a winner or a draw  
+**And** the message should be visible enough to avoid confusion.
+
+---
+
+## 6. Local Multiplayer Mode
+
+### Scenario 6.1: Alternate turns between two players on the same device
+**Given** a local multiplayer game has been started  
+**When** player 1 makes a valid move  
+**Then** the turn should pass to player 2  
+**And** the turn indicator should reflect that it is now player 2’s turn  
+**And** this behavior should continue, alternating turns until the game ends.
+
+### Scenario 6.2: Display the result to both players
+**Given** the local multiplayer game has ended  
+**When** the game detects a winner  
+**Then** it should display who won (player 1 or player 2, or "X" / "O")  
+**And** both players should be able to clearly see the result on the screen.
+
+---
+
+## 7. Play Against the Computer (AI)
+
+### Scenario 7.1: Select play against the computer
+**Given** the user is on the game start screen  
+**When** the user selects the "Play against the computer" mode  
+**Then** the game should be configured so that one player is human and the other is controlled by the AI  
+**And** it should be clearly indicated which player is human and which is the computer.
+
+### Scenario 7.2: Computer’s turn
+**Given** the game is in play-against-the-computer mode  
+**And** the human player has made a valid move  
+**When** the human player’s turn ends  
+**Then** the computer should automatically make a valid move on the board  
+**And** after the computer’s move, the turn should return to the human player.
+
+### Scenario 7.3: AI difficulty (when applicable)
+**Given** the game offers different difficulty levels for the computer (for example: easy, medium, hard)  
+**When** the user selects a difficulty level before starting the game  
+**Then** the AI’s behavior should adapt to the selected difficulty  
+**And** the gameplay experience should feel easier or more challenging based on that selection.
 
 ---
